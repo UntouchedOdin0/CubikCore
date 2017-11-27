@@ -1,0 +1,6 @@
+mysql:
+  host: localhost
+  port: 20
+  database: cubikmc
+  username: admin
+  password: admin
