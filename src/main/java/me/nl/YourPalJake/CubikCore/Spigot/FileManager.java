@@ -11,7 +11,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public class FileManager {
 
-
     FileConfiguration config;
     File cfile;
 
@@ -20,11 +19,9 @@ public class FileManager {
         if(!cfile.exists()){
             cfile.getParentFile().mkdirs();
             copy(p.getResource("config.yml"), cfile);
-
+            saveConfig();
         }
 
-        config = new YamlConfiguration();
-        loadConfig();
 
     }
 
@@ -44,21 +41,18 @@ public class FileManager {
     }
 
     public FileConfiguration getConfig() {
+        loadConfig();
         return config;
     }
 
     public void saveConfig(){
         try{
-            config.save(cfile);
+            getConfig().save(cfile);
         }catch(Exception e){
             e.printStackTrace();
         }
     }
-    public void loadConfig(){
-        try{
-            config.load(cfile);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    private void loadConfig(){
+         config = YamlConfiguration.loadConfiguration(cfile);
     }
 }

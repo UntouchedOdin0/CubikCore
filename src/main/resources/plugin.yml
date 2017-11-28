@@ -1,4 +1,4 @@
-name: CubikMCCore
+name: CubikCore
 author: YourPalJake
-main: me.nl.YourPalJake.CubikCore.Spigot.CCCore
+main: me.nl.YourPalJake.CubikCore.Spigot.CCore
 version: 0.1
