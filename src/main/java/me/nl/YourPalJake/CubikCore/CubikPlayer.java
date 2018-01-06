@@ -14,22 +14,24 @@ public interface CubikPlayer {
     /**
      * Returns the player name
      *
-     * @return CubikPlayers name
+     * @return CubikPlayer's name
      */
     String getName();
 
     /**
-     * Sets the players custom name
+     * Sets the CubikPlayer custom name
      * This can be used for example chat format
-     * Note the default is the players name
+     * Note the default is the latest CustomName
+     * Defined in the Player file
      *
      * @param name The name
      */
     void setCustomName(String name);
 
     /**
+     * Get the custom name from the CubikPlayer
      *
-     * @return
+     * @return CubikPlayer's custom name
      */
     String getCustomName();
 }

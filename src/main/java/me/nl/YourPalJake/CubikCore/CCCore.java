@@ -13,7 +13,7 @@ public class CCCore extends JavaPlugin{
 
     @Override
     public void onDisable(){
-
+        
     }
 
 }
