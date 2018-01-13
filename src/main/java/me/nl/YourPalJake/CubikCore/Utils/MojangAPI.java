@@ -17,7 +17,7 @@ public class MojangAPI {
      * @return The UUID of the player you defined
      */
     @SuppressWarnings("deprecation")
-    public String getUUID(String name){
+    public static String getUUID(String name){
         String url = "https://api.mojang.com/users/profiles/minecraft/"+name;
         try{
             String UUIDJson = IOUtils.toString(new URL(url));
@@ -30,6 +30,25 @@ public class MojangAPI {
             e.printStackTrace();
         }
         return "error";
+    }
+
+    /**
+     * Know if the player exists in the Mojang database
+     *
+     * @param name Then name of the player that you wanna know if he exists
+     * @return True or false
+     */
+    @SuppressWarnings("deprecation")
+    public static boolean doesPlayerExist(String name){
+        String url = "https://api.mojang.com/users/profiles/minecraft/"+name;
+        try{
+            String UUIDJson = IOUtils.toString(new URL(url));
+            return (UUIDJson.isEmpty());
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+
     }
 
 

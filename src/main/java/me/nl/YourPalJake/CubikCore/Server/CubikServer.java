@@ -1,5 +1,6 @@
-package me.nl.YourPalJake.CubikCore;
+package me.nl.YourPalJake.CubikCore.Server;
 
+import me.nl.YourPalJake.CubikCore.CubikPlayer;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;
@@ -32,5 +33,23 @@ public interface CubikServer {
      * @return The CubikPlayer instance
      */
     CubikPlayer getCubikPlayer(Player player);
+
+    /**
+     * Checks if a CubikPlayer is online
+     *
+     * @param name The name of the player
+     * @return true or false
+     */
+    boolean isCubikPlayerOnline(String name);
+
+    /**
+     * Checks if a CubikPlayer is online
+     *
+     * @param uuid The UUID of the player
+     * @return true or false
+     */
+    boolean isCubikPlayerOnline(UUID uuid);
+
+
 
 }

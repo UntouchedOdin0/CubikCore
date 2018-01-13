@@ -1,4 +1,5 @@
 name: CubikCore
 author: YourPalJake
-main: CCore
+main: me.nl.YourPalJake.CubikCore.CCCore
 version: 0.1
+softdepend: [PlaceholderAPI]
