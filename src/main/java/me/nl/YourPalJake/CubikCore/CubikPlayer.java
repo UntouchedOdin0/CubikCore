@@ -34,4 +34,18 @@ public interface CubikPlayer {
      * @return CubikPlayer's custom name
      */
     String getCustomName();
+
+    /**
+     * Set the player frozen
+     *
+     * @param frozen true/false
+     */
+    void setFrozen(boolean frozen);
+
+    /**
+     * Get if the player is frozen
+     *
+     * @return true/false
+     */
+    boolean isFrozen();
 }

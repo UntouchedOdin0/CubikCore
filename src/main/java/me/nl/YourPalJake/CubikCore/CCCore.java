@@ -1,6 +1,7 @@
 package me.nl.YourPalJake.CubikCore;
 
 import me.nl.YourPalJake.CubikCore.Hooks.PlaceholderAPI;
+import me.nl.YourPalJake.CubikCore.Mojang.MojangCore;
 import me.nl.YourPalJake.CubikCore.Server.CServer;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,6 +11,7 @@ public class CCCore extends JavaPlugin{
 
     @Override
     public void onEnable(){
+        MojangCore.setup();
         Cubik.setCubikServer(new CServer());
         cpm = new CubikPlayerManager();
         registerHooks();
