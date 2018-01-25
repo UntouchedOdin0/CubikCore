@@ -1,22 +1,6 @@
-package me.nl.YourPalJake.CubikCore;
+package me.nl.YourPalJake.CubikCore.Player;
 
-import org.bukkit.entity.Player;
-
-public interface CubikPlayer {
-
-    /**
-     * Returns the player instance
-     *
-     * @return The player
-     */
-    Player getPlayer();
-
-    /**
-     * Returns the player name
-     *
-     * @return CubikPlayer's name
-     */
-    String getName();
+public interface CubikOfflinePlayer{
 
     /**
      * Sets the CubikPlayer custom name
@@ -48,4 +32,5 @@ public interface CubikPlayer {
      * @return true/false
      */
     boolean isFrozen();
+
 }

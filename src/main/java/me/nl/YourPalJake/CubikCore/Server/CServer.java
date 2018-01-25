@@ -1,7 +1,7 @@
 package me.nl.YourPalJake.CubikCore.Server;
 
 import me.nl.YourPalJake.CubikCore.CCCore;
-import me.nl.YourPalJake.CubikCore.CubikPlayer;
+import me.nl.YourPalJake.CubikCore.Player.CubikPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

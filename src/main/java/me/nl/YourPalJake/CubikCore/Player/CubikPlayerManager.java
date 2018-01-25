@@ -1,10 +1,14 @@
-package me.nl.YourPalJake.CubikCore;
+package me.nl.YourPalJake.CubikCore.Player;
 
 import java.util.HashMap;
 
 public class CubikPlayerManager{
 
     private HashMap<String, CubikPlayer> cubikPlayerHashMap = new HashMap<>();
+
+    public void createCubikPlayer(String name, CubikPlayer cubikPlayer){
+        this.cubikPlayerHashMap.put(name, cubikPlayer);
+    }
 
     /**
      * Get the CubikPlayer in the server
