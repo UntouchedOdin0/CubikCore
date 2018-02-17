@@ -4,16 +4,15 @@ import me.nl.YourPalJake.CubikCore.Cubik;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
-public class PlayerJoin implements Listener{
+public class PlayerQuit implements Listener{
 
-    //TODO: Get values from MySQL/SQLLite
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent e){
+    public void onPlayerQuit(PlayerQuitEvent e){
         Player player = e.getPlayer();
-        Cubik.getCubikPlayerManager().createCubikPlayer(player.getName());
+        Cubik.getCubikPlayerManager().removeCubikPlayer(player.getName());
 
     }
 

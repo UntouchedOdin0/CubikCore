@@ -6,8 +6,8 @@ public class CubikPlayerManager{
 
     private HashMap<String, CubikPlayer> cubikPlayerHashMap = new HashMap<>();
 
-    public void createCubikPlayer(String name, CubikPlayer cubikPlayer){
-        this.cubikPlayerHashMap.put(name, cubikPlayer);
+    public void createCubikPlayer(String name){
+        //TODO get data and create new instance of CPlayer
     }
 
     /**
@@ -20,4 +20,8 @@ public class CubikPlayerManager{
         return cubikPlayerHashMap.get(name);
     }
 
+    public void removeCubikPlayer(String name){
+        //TODO save data
+        cubikPlayerHashMap.remove(name);
+    }
 }

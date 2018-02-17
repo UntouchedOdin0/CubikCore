@@ -1,17 +1,23 @@
 package me.nl.YourPalJake.CubikCore.Player;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class CPlayer implements CubikPlayer{
     private String name;
+    private Player player;
+    private String customName;
+    private boolean frozen;
 
-    public CPlayer(String name){
-
+    public CPlayer(String name, String customName, boolean frozen){
+        this.player = Bukkit.getServer().getPlayer(name);
+        this.customName = customName;
+        this.frozen = frozen;
     }
 
     @Override
     public Player getPlayer() {
-        return null;
+        return player;
     }
 
     @Override
@@ -26,16 +32,16 @@ public class CPlayer implements CubikPlayer{
 
     @Override
     public String getCustomName() {
-        return null;
+        return this.customName;
     }
 
     @Override
     public void setFrozen(boolean frozen) {
-
+        this.frozen = frozen;
     }
 
     @Override
     public boolean isFrozen() {
-        return false;
+        return this.frozen;
     }
 }
