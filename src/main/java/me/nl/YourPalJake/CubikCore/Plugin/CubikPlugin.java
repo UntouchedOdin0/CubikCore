@@ -1,8 +1,9 @@
 package me.nl.YourPalJake.CubikCore.Plugin;
 
-public abstract class CubikPlugin {
+import org.bukkit.plugin.Plugin;
 
+public interface CubikPlugin {
 
-
+    Plugin getPlugin();
 
 }

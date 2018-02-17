@@ -1,30 +1,31 @@
 package me.nl.YourPalJake.CubikCore.File;
 
+import me.nl.YourPalJake.CubikCore.Plugin.CubikPlugin;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import java.io.*;
 
 public class CommandFile {
 
-    private File cfile;
-    private FileConfiguration commandFile;
 
-    public void setup(Plugin plugin){
+    private final File cfile;
+    private final FileConfiguration commandFile;
 
+
+    public CommandFile(CubikPlugin cPlugin){
+        cfile = new File(cPlugin.getPlugin().getDataFolder(), "commands.yml");
+        if(!cfile.exists()){
+            copy(cPlugin.getPlugin().getResource("commands.yml"), cfile);
+        }
+        commandFile = YamlConfiguration.loadConfiguration(cfile);
     }
 
     public FileConfiguration getCommandFile() {
         return commandFile;
     }
 
-    public void saveCommandFile(){
-        try{
-            commandFile.save(cfile);
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-    }
 
     private void copy(InputStream in, File file){
         try{
