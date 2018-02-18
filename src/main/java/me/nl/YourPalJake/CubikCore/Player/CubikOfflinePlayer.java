@@ -3,6 +3,13 @@ package me.nl.YourPalJake.CubikCore.Player;
 public interface CubikOfflinePlayer{
 
     /**
+     * Checks if the player ever joined the server.
+     *
+     * @return true or false
+     */
+    boolean hasJoinedBefore();
+
+    /**
      * Sets the CubikPlayer custom name
      * This can be used for example chat format
      * Note the default is the latest CustomName

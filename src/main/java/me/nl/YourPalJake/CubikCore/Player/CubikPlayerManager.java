@@ -1,27 +1,16 @@
 package me.nl.YourPalJake.CubikCore.Player;
 
-import java.util.HashMap;
-
-public class CubikPlayerManager{
-
-    private HashMap<String, CubikPlayer> cubikPlayerHashMap = new HashMap<>();
-
-    public void createCubikPlayer(String name){
-        //TODO get data and create new instance of CPlayer
-    }
+public interface CubikPlayerManager{
 
     /**
-     * Get the CubikPlayer in the server
+     * Create a new CubikPlayer instance
      *
-     * @param name The name of the player
-     * @return the CubikPlayer instance
+     * @param name The username of the player
      */
-    public CubikPlayer getCubikPlayer(String name){
-        return cubikPlayerHashMap.get(name);
-    }
+    void createCubikPlayer(String name);
 
-    public void removeCubikPlayer(String name){
-        //TODO save data
-        cubikPlayerHashMap.remove(name);
-    }
+
+    CubikPlayer getCubikPlayer(String name);
+
+    void removeCubikPlayer(String name);
 }

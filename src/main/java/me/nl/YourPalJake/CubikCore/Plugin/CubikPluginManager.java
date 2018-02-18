@@ -2,12 +2,8 @@ package me.nl.YourPalJake.CubikCore.Plugin;
 
 import java.util.HashMap;
 
-public final class CubikPluginManager {
+public interface CubikPluginManager {
 
-    private HashMap<String, CubikPlugin> cubikPluginHashMap = new HashMap<>();
-
-    public void registerCubikPlugin(CubikPlugin cubikPlugin, String name){
-
-    }
+    public void registerCubikPlugin(CubikPlugin cubikPlugin, String name);
 
 }

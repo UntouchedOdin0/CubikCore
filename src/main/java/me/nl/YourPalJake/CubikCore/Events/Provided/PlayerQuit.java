@@ -12,7 +12,6 @@ public class PlayerQuit implements Listener{
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e){
         Player player = e.getPlayer();
-        Cubik.getCubikPlayerManager().removeCubikPlayer(player.getName());
 
     }
 

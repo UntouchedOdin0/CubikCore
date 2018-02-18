@@ -36,6 +36,13 @@ public interface CubikPlayer {
     String getCustomName();
 
     /**
+     * See if the player has a customName
+     *
+     * @return true or false
+     */
+    boolean hasCustomName();
+
+    /**
      * Set the player frozen
      *
      * @param frozen true/false

@@ -4,9 +4,9 @@ import me.nl.YourPalJake.CubikCore.Events.Provided.PlayerJoin;
 import me.nl.YourPalJake.CubikCore.Events.Provided.PlayerMove;
 import me.nl.YourPalJake.CubikCore.Events.Provided.PlayerQuit;
 import me.nl.YourPalJake.CubikCore.Hooks.PlaceholderAPI;
-import me.nl.YourPalJake.CubikCore.Mojang.MojangCore;
-import me.nl.YourPalJake.CubikCore.Player.CubikPlayerManager;
-import me.nl.YourPalJake.CubikCore.Plugin.CubikPluginManager;
+import me.nl.YourPalJake.CubikCore.Mojang.MAPI;
+import me.nl.YourPalJake.CubikCore.Player.CPlayerManager;
+import me.nl.YourPalJake.CubikCore.Plugin.CPluginManager;
 import me.nl.YourPalJake.CubikCore.Server.CServer;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,10 +16,10 @@ public class CCCore extends JavaPlugin{
 
     @Override
     public void onEnable(){
-        MojangCore.setup();
         Cubik.setCubikServer(new CServer());
-        Cubik.setCubikPluginManager(new CubikPluginManager());
-        Cubik.setCubikPlayerManager(new CubikPlayerManager());
+        Cubik.setMojangAPI(new MAPI());
+        Cubik.getCubikServer().setCubikPluginManger(new CPluginManager());
+        Cubik.getCubikServer().setCubikPlayerManager(new CPlayerManager());
         registerHooks();
 
     }

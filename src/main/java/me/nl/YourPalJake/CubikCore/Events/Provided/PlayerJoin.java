@@ -13,7 +13,6 @@ public class PlayerJoin implements Listener{
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
         Player player = e.getPlayer();
-        Cubik.getCubikPlayerManager().createCubikPlayer(player.getName());
 
     }
 

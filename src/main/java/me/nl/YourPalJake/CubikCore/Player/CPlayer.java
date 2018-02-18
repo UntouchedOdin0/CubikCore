@@ -17,7 +17,7 @@ public class CPlayer implements CubikPlayer{
 
     @Override
     public Player getPlayer() {
-        return player;
+        return this.player;
     }
 
     @Override
@@ -27,12 +27,21 @@ public class CPlayer implements CubikPlayer{
 
     @Override
     public void setCustomName(String name) {
-
+        this.customName = name;
     }
 
     @Override
     public String getCustomName() {
         return this.customName;
+    }
+
+    @Override
+    public boolean hasCustomName(){
+        if(this.name.equals(this.customName)){
+            return false;
+        }else {
+            return true;
+        }
     }
 
     @Override
