@@ -13,7 +13,7 @@ public final class Cubik {
 
     public static void setCubikServer(CubikServer server){
         if(cubikServer != null){
-            Bukkit.getLogger().severe("Cannot make a second instance of CubikServer");
+            Bukkit.getLogger().severe("Cannot make a second instance of CubikServer!");
         }else{
             cubikServer = server;
         }
@@ -21,7 +21,7 @@ public final class Cubik {
 
     public static void setMojangAPI(MojangAPI api){
         if(mojangAPI != null){
-            Bukkit.getLogger().severe("Cannot make a second instance of MojangAPI");
+            Bukkit.getLogger().severe("Cannot make a second instance of MojangAPI!");
         }else{
             mojangAPI = api;
         }
