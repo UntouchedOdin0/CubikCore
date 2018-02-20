@@ -18,9 +18,11 @@ public class CommandFile {
 
     public CommandFile(CubikPlugin cPlugin){
         this.cubikPlugin = cPlugin;
+        if(!cPlugin.getPlugin().getDataFolder().exists()) cPlugin.getPlugin().getDataFolder().mkdir();
         this.cfile = new File(cPlugin.getPlugin().getDataFolder(), "commands.yml");
         if(!cfile.exists()){
             copy(cPlugin.getPlugin().getResource("commands.yml"), cfile);
+
         }
         this.commandFile = YamlConfiguration.loadConfiguration(cfile);
     }

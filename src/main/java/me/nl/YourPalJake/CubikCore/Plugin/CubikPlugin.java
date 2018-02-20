@@ -9,6 +9,8 @@ public interface CubikPlugin {
 
     Plugin getPlugin();
 
+    void generateCommandFile();
+
     CommandFile getCommandFile();
 
 }

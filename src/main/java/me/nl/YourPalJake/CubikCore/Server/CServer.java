@@ -14,7 +14,7 @@ public class CServer implements CubikServer{
 
     @Override
     public void setCubikPluginManger(CubikPluginManager cpm) {
-        if(cubikPluginManager == null){
+        if(cubikPluginManager != null){
             Bukkit.getLogger().severe("Cannot make a second instance of CubikPluginManager");
         }else{
             this.cubikPluginManager = cpm;
@@ -23,7 +23,7 @@ public class CServer implements CubikServer{
 
     @Override
     public void setCubikPlayerManager(CubikPlayerManager cpm) {
-        if(this.cubikPlayerManager == null){
+        if(this.cubikPlayerManager != null){
             Bukkit.getLogger().severe("Cannot make a second instance of CubikPlayerManager");
         }else{
             this.cubikPlayerManager = cpm;

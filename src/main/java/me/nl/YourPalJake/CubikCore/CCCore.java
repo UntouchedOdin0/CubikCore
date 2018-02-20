@@ -20,7 +20,7 @@ public class CCCore extends JavaPlugin{
         Cubik.setMojangAPI(new MAPI());
         Cubik.getCubikServer().setCubikPluginManger(new CPluginManager());
         Cubik.getCubikServer().setCubikPlayerManager(new CPlayerManager());
-        registerHooks();
+        registerEvents();
 
     }
 

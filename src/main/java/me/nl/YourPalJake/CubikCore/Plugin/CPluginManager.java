@@ -7,7 +7,11 @@ public class CPluginManager implements CubikPluginManager{
     private HashMap<String, CubikPlugin> cubikPluginHashMap = new HashMap<>();
 
     @Override
-    public void registerCubikPlugin(CubikPlugin cubikPlugin, String name) {
+    public void registerCubikPlugin(String name, CubikPlugin cubikPlugin, boolean useCommandFile) {
         cubikPluginHashMap.put(name, cubikPlugin);
+        if(useCommandFile){
+            cubikPlugin.generateCommandFile();
+        }
+
     }
 }
